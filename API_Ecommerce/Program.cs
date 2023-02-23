@@ -1,4 +1,11 @@
+using ECommerceDbContext;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Add Connection String with Depndancy Injection (Singleton)
+builder.Services.AddDbContext<ECommerce_DbContext>(options => 
+                 options.UseSqlServer(builder.Configuration.GetConnectionString("APIConnectionString")));
 
 // Add services to the container.
 
