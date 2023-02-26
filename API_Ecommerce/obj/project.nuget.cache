@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "CiQ1vFB00xCa3q0eNqa/L7D14SSDELwlwtYZWPLNU9DPI5EhAxxrDbt9lyEBSVIjGqbBssnZDh4ZgYNaoKD1uw==",
+  "dgSpecHash": "qvp0Uy2MDFc5H5ouW+CI9Hsk6iByyFQAjKNLC3PXGCJmP6y/I8YDMvp6b2XfKmcaeEXwRQiXih3rh1N2TaGomw==",
   "success": true,
   "projectFilePath": "E:\\API_EcommerceITI\\API_Ecommerce\\API_Ecommerce.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\odoo\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\odoo\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\odoo\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\odoo\\.nuget\\packages\\mediatr\\12.0.1\\mediatr.12.0.1.nupkg.sha512",
+    "C:\\Users\\odoo\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\odoo\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\odoo\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\odoo\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",

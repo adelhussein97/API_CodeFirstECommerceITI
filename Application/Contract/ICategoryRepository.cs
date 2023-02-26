@@ -1,0 +1,15 @@
+﻿using Domains;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Application.Contract
+{
+    public interface ICategoryRepository
+    {
+        List<Category> GetAllCategories();
+        Category? GetCategoryDetails(int id);
+    }
+}
