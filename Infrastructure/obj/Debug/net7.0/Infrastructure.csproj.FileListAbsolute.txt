@@ -10,3 +10,12 @@ E:\API_EcommerceITI\Infrastructure\obj\Debug\net7.0\Infrastructure.dll
 E:\API_EcommerceITI\Infrastructure\obj\Debug\net7.0\refint\Infrastructure.dll
 E:\API_EcommerceITI\Infrastructure\obj\Debug\net7.0\Infrastructure.pdb
 E:\API_EcommerceITI\Infrastructure\obj\Debug\net7.0\ref\Infrastructure.dll
+E:\API_EcommerceITI\Infrastructure\bin\Debug\net7.0\APIDTO.dll
+E:\API_EcommerceITI\Infrastructure\bin\Debug\net7.0\Application.dll
+E:\API_EcommerceITI\Infrastructure\bin\Debug\net7.0\Domains.dll
+E:\API_EcommerceITI\Infrastructure\bin\Debug\net7.0\ECommerceDbContext.dll
+E:\API_EcommerceITI\Infrastructure\bin\Debug\net7.0\Application.pdb
+E:\API_EcommerceITI\Infrastructure\bin\Debug\net7.0\ECommerceDbContext.pdb
+E:\API_EcommerceITI\Infrastructure\bin\Debug\net7.0\APIDTO.pdb
+E:\API_EcommerceITI\Infrastructure\bin\Debug\net7.0\Domains.pdb
+E:\API_EcommerceITI\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.CopyComplete

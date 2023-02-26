@@ -10,3 +10,8 @@ E:\API_EcommerceITI\Application\obj\Debug\net7.0\Application.dll
 E:\API_EcommerceITI\Application\obj\Debug\net7.0\refint\Application.dll
 E:\API_EcommerceITI\Application\obj\Debug\net7.0\Application.pdb
 E:\API_EcommerceITI\Application\obj\Debug\net7.0\ref\Application.dll
+E:\API_EcommerceITI\Application\bin\Debug\net7.0\APIDTO.dll
+E:\API_EcommerceITI\Application\bin\Debug\net7.0\Domains.dll
+E:\API_EcommerceITI\Application\bin\Debug\net7.0\APIDTO.pdb
+E:\API_EcommerceITI\Application\bin\Debug\net7.0\Domains.pdb
+E:\API_EcommerceITI\Application\obj\Debug\net7.0\Application.csproj.CopyComplete

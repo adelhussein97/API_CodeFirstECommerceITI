@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "hWFvRd3xHkJT+SIFPrbE/TEL8Jzoz7UV1g8jZOsn48/E9Vgb8rpWAZUYzK+K8SfvYOrTeeFxTtnFGNNN1oSx+g==",
+  "dgSpecHash": "K0xSd7jKcRn+CpTE27nRdjeGY0mcjEcVG8EHWsJWB6MlOvwGgRkiQ8raej8hN2HWZUv/1pIiXKS4TNIfWzy5Fg==",
   "success": true,
   "projectFilePath": "E:\\API_EcommerceITI\\Application\\Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\odoo\\.nuget\\packages\\mediatr\\12.0.1\\mediatr.12.0.1.nupkg.sha512",
+    "C:\\Users\\odoo\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\odoo\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
