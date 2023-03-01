@@ -1,6 +1,11 @@
-﻿using Domains;
-using ECommerceDbContext;
-using Microsoft.AspNetCore.Http;
+﻿
+using Application.Features.Products.Commands.CreateProduct;
+using Application.Features.Products.Commands.DeleteProduct;
+using Application.Features.Products.Commands.UpdateProduct;
+using Application.Features.Products.Queries.GetAllProducts;
+using Application.Features.Products.Queries.GetProductDetails;
+
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 namespace API_Ecommerce.Controller
 {
@@ -8,53 +13,48 @@ namespace API_Ecommerce.Controller
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private readonly ECommerce_DbContext db;
-        public ProductsController(ECommerce_DbContext context)
+        private readonly IMediator mediator;
+
+        public ProductsController(IMediator mediator)
         {
-            db=context;
+            this.mediator = mediator;
         }
 
-        // localhost:5282/api/Product
+        // URL - https://localhost:44378/api/Products/ type GET
         [HttpGet]
-        public IActionResult GetAllProducts()
+        public async Task<IActionResult> GetAllProducts([FromQuery] string? Filter = null)
         {
-            try
-            {
-                return Ok(db.Products);
-            }
-            catch (Exception)
-            {
-                return BadRequest("Sorry All Data Not Available");
-            }
-           
+            return Ok(await mediator.Send(new FiltersProductsQuery(Filter)));
+
         }
-        // localhost:5282/api/Product
+
+        // URL - https://localhost:44378/api/Products/{id} type GET
         [HttpGet("{id}")]
-        public IActionResult GetAllProductsbyID(int id)
+        public async Task<IActionResult> GetProductDetails(int id, [FromQuery] GetProductDetailsQuery command)
         {
-            try
-            {
-                return Ok(db.Products.Where(p=>p.Id==id));
-            }
-            catch (Exception)
-            {
-                return BadRequest("Sorry All Data Not Available");
-            }
+            command.Id = id;
+            return Ok(await mediator.Send(command));
+        }
+        // URL - https://localhost:44378/api/Products/ type Post
+        [HttpPost]
+        public async Task<IActionResult> CreateProduct([FromBody] CreateProductCommand query)
+        {
+            return Ok(await mediator.Send(query));
+        }
+        // URL - https://localhost:44378/api/Products/{id} type Put (Update)
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> UpdateProduct(int id,[FromBody] UpdateProductCommand command)
+        {
+            command.Id = id;
+            return Ok(await mediator.Send(command));
 
         }
-
-        [HttpGet("Cat/{Catid}")]
-        public IActionResult GetAllProductsbyCategoryID(int Catid)
+        // URL - https://localhost:44378/api/Products/{id} type Delete
+        [HttpDelete]
+        public async Task<IActionResult> DeleteProduct(int id,[FromQuery] DeleteProductCommand command)
         {
-            try
-            {
-                return Ok(db.Categories.Where(p => p.Id == Catid).Select(p=>p.Products));
-            }
-            catch (Exception)
-            {
-                return BadRequest("Sorry All Data Not Available");
-            }
-
+            command.Id = id;
+            return Ok(await mediator.Send(command));
         }
 
 

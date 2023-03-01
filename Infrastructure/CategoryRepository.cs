@@ -1,25 +1,33 @@
-﻿using Application.Contract;
+﻿using APIDTO.Category;
+using Application.Contract;
+using Azure.Core;
 using Domains;
 using ECommerceDbContext;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure
 {
-    public class CategoryRepository : ICategoryRepository
+    public class CategoryRepository : Repository<Category,ECommerce_DbContext,int> , ICategoryRepository
     {
-        private readonly ECommerce_DbContext context;
-        public CategoryRepository(ECommerce_DbContext context)
+        public CategoryRepository(ECommerce_DbContext db):base(db)
         {
-            this.context = context;
+            
         }
 
-        public List<Category> GetAllCategories()
-        {
-           return context .Categories.ToList();
-        }
+       
 
-        public Category? GetCategoryDetails(int id)
+        public async Task<IEnumerable<Category>> FilterByAsync(string? Filter = null,int? parentCategoryId= null)
         {
-            return context.Categories.FirstOrDefault(c=>c.Id==id);
+            IEnumerable<Category> category= Context.Categories
+                .Where(c=> Filter==null || c.Name.ToLower().Contains(Filter.ToLower()))
+                .Where(c=>parentCategoryId==null || 
+                (c.ParentCategories != null ?  c.ParentCategories.Id == parentCategoryId :false));
+
+            return await Task.FromResult( category);
+            
         }
+       
+
+
     }
 }

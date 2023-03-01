@@ -80,3 +80,13 @@ E:\API_EcommerceITI\API_Ecommerce\bin\Debug\net7.0\Application.pdb
 E:\API_EcommerceITI\API_Ecommerce\bin\Debug\net7.0\APIDTO.pdb
 E:\API_EcommerceITI\API_Ecommerce\bin\Debug\net7.0\Infrastructure.dll
 E:\API_EcommerceITI\API_Ecommerce\bin\Debug\net7.0\Infrastructure.pdb
+E:\API_EcommerceITI\API_Ecommerce\bin\Debug\net7.0\Castle.Core.dll
+E:\API_EcommerceITI\API_Ecommerce\bin\Debug\net7.0\FluentValidation.dll
+E:\API_EcommerceITI\API_Ecommerce\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll
+E:\API_EcommerceITI\API_Ecommerce\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Proxies.dll
+E:\API_EcommerceITI\API_Ecommerce\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+E:\API_EcommerceITI\API_Ecommerce\bin\Debug\net7.0\Microsoft.OpenApi.dll
+E:\API_EcommerceITI\API_Ecommerce\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\API_EcommerceITI\API_Ecommerce\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\API_EcommerceITI\API_Ecommerce\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\API_EcommerceITI\API_Ecommerce\obj\Debug\net7.0\API_Ecommerce.MvcApplicationPartsAssemblyInfo.cs

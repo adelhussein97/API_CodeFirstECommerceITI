@@ -1,5 +1,8 @@
-﻿using Application.Features.Category.Queries.GetAllCategories;
-using ECommerceDbContext;
+﻿using Application.Features.Categories.Commands.CreateCategory;
+using Application.Features.Categories.Commands.DeleteCategory;
+using Application.Features.Categories.Commands.EditCategory;
+using Application.Features.Categories.Queries.FilterCategories;
+using Application.Features.Categories.Queries.GetCategoryDetails;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -18,36 +21,41 @@ namespace API_Ecommerce.Controller
             this.mediator = mediator;
         }
 
-        // localhost:5282/api/Category
+        // URL - https://localhost:44378/api/Categories/ type GET
         [HttpGet]
-        public IActionResult GetAllCategories(GetAllCategoriesQuery query)
+        public async Task< IActionResult> GetAllCategories([FromQuery] string ? Filter =null,int ? parentCategoryId=null)
         {
-            
-            return Ok(mediator.Send(query));
+            return Ok(await mediator.Send(new FiltersCategoriesQuery(Filter,parentCategoryId)));
 
         }
-        // localhost:5282/api/CategoryDetails
+
+        // URL - https://localhost:44378/api/Categories/{id} type GET
         [HttpGet("{id}")]
-        public IActionResult GetCategoryDetails(int id)
+        public async Task<IActionResult> GetCategoryDetails(int id, [FromQuery] GetCategoryDetailsQuery command)
         {
-            return Ok();
-
+            command.Id = id;
+            return Ok(await mediator.Send(command));
         }
+        // URL - https://localhost:44378/api/Categories/ type Post
         [HttpPost]
-        public IActionResult AddCategory()
+        public async Task< IActionResult> AddCategory([FromBody] CreateCategoryCommand query)
         {
-            return Ok();
-
+            return Ok(await mediator.Send(query));
         }
+        // URL - https://localhost:44378/api/Categories/{id} type Put (Update)
         [HttpPut("{id}")]
-        public IActionResult UpdateCategory()
+        public async Task<IActionResult> UpdateCategory(int id,[FromBody] UpdateCategoryCommand command)
         {
-            return Ok();
+            command.Id = id;
+            return Ok(await mediator.Send(command));
+           
         }
+        // URL - https://localhost:44378/api/Categories/{id} type Delete
         [HttpDelete]
-        public IActionResult DeleteCategory()
+        public async Task<IActionResult> DeleteCategory(int id,[FromQuery] DeleteCategoryCommand command)
         {
-            return Ok();
+            command.Id = id;
+            return Ok(await mediator.Send(command));
         }
     }
 }
