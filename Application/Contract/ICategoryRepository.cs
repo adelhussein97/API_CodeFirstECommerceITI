@@ -1,15 +1,13 @@
-﻿using Domains;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using APIDTO.Category;
+using Domains;
+using Microsoft.EntityFrameworkCore;
 
 namespace Application.Contract
 {
-    public interface ICategoryRepository
+    public interface ICategoryRepository : IRepository<Category,int>
     {
-        List<Category> GetAllCategories();
-        Category? GetCategoryDetails(int id);
+        Task<IEnumerable<Category>> FilterByAsync(string? Filter = null,int ? ParentCategoryId=null);
+
     }
 }

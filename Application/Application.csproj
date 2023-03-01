@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -7,22 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Brand\Commands\AddBrand\" />
-    <Folder Include="Features\Brand\Commands\EditBrand\" />
-    <Folder Include="Features\Brand\Commands\DeleteBrand\" />
-    <Folder Include="Features\Category\Commands\AddCategory\" />
-    <Folder Include="Features\Category\Commands\EditCategory\" />
-    <Folder Include="Features\Category\Commands\DeleteCategory\" />
+    <Folder Include="Features\Brands\Commands\AddBrand\" />
+    <Folder Include="Features\Brands\Commands\EditBrand\" />
+    <Folder Include="Features\Brands\Commands\DeleteBrand\" />
     <Folder Include="Features\Prd_Images\Commands\AddImage\" />
     <Folder Include="Features\Prd_Images\Commands\EditImage\" />
     <Folder Include="Features\Prd_Images\Commands\DeleteImage\" />
-    <Folder Include="Features\Product\Commands\AddProduct\" />
-    <Folder Include="Features\Product\Commands\EditProduct\" />
-    <Folder Include="Features\Product\Commands\DeleteProduct\" />
+    <Folder Include="Features\Categories\Commands\CreateCategory\" />
+    <Folder Include="Features\Categories\Commands\UpdateCategory\" />
+    <Folder Include="Features\Categories\Commands\DeleteCategory\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.5.1" />
     <PackageReference Include="MediatR" Version="12.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.3" />
   </ItemGroup>
 
   <ItemGroup>

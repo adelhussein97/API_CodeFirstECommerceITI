@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using APIDTO.Product;
+using Domains;
+
 
 namespace Application.Contract
 {
-    public interface IProductRepository
+    public interface IProductRepository:IRepository<Product, long>
     {
+        Task<IEnumerable<ProductDetailsDto>> FilterByAsync(string? Name=null,int? FromPrice=null,int? ToPrice=null,bool? IsAvailable=null,bool? HasDiscount=null,int? CategoryID =null);
+
     }
 }
